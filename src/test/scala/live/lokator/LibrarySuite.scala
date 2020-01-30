@@ -5,7 +5,7 @@ package live.lokator
 
 import org.scalatest.FunSuite
 import org.junit.runner.RunWith
-import org.scalatest.junit.JUnitRunner
+import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class LibrarySuite extends FunSuite {
