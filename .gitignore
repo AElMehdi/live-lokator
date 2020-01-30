@@ -5,3 +5,7 @@
 build
 
 .idea/*
+
+### Scala template
+*.class
+*.log
