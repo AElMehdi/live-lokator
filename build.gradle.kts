@@ -1,5 +1,6 @@
 plugins {
     scala
+    application
 }
 
 repositories {
@@ -18,4 +19,8 @@ dependencies {
 
     // Need scala-xml at test runtime
     testRuntimeOnly("org.scala-lang.modules:scala-xml_2.12:1.2.0")
+}
+
+application {
+    mainClassName = "live.lokator.Consumer"
 }
