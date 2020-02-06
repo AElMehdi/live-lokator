@@ -27,9 +27,9 @@ class Consumer {
       consumer.subscribe(util.Arrays.asList(topic))
       while (true) {
          val record = consumer.poll(Duration.ofMillis(1000))
-         for (data <- record.iterator) {
-            println(data)
-         }
+//         for (data <- record.iterator) {
+//            println(data)
+//         }
       }
    }
 }
