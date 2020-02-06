@@ -1,4 +1,7 @@
-ThisBuild / scalaVersion := "2.12.7"
+ThisBuild / scalaVersion := "2.13.1-bin-abcd123"
+
+ThisBuild / resolvers += "scala-integration" at
+  "https://scala-ci.typesafe.com/artifactory/scala-integration/"
 
 ThisBuild / organization := "com.aelmehdi"
 
