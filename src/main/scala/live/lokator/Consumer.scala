@@ -6,11 +6,10 @@ import java.util.Properties
 
 import org.apache.kafka.clients.consumer.KafkaConsumer
 
-class Consumer {
+object Consumer {
 
 
    def main(args: Array[String]): Unit = {
-      println("Bingo")
       consumeFromKafka("quick-start")
    }
 
