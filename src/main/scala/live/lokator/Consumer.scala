@@ -5,6 +5,7 @@ import java.util
 import java.util.Properties
 
 import org.apache.kafka.clients.consumer.KafkaConsumer
+import scala.collection.JavaConverters._
 
 object Consumer {
 
@@ -25,10 +26,10 @@ object Consumer {
 
       consumer.subscribe(util.Arrays.asList(topic))
       while (true) {
-         val record = consumer.poll(Duration.ofMillis(1000))
-//         for (data <- record.iterator) {
-//            println(data)
-//         }
+         val record = consumer.poll(Duration.ofMillis(1000)).asScala
+         for (data <- record.iterator) {
+            println(data)
+         }
       }
    }
 }
