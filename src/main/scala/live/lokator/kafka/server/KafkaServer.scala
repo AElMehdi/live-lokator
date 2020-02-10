@@ -34,7 +34,7 @@ object KafkaServer extends App {
   val kafkaProperties = new Properties()
   kafkaProperties.put("zookeeper.connect", "localhost:2181")
   kafkaProperties.put("broker.id", "1")
-  kafkaProperties.put("listeners", "PLAINTEXT://:9093")
+  kafkaProperties.put("listeners", "PLAINTEXT://:9092")
   kafkaProperties.put("offsets.topic.replication.factor", "1")
   kafkaProperties.put("log.dirs", Files.createTempDirectory("kafka-logs").toString)
 
@@ -46,10 +46,8 @@ object KafkaServer extends App {
 
   zooKeeperThread.join()
 
-
   kafka.shutdown()
   kafka.awaitShutdown()
-
 
   zooKeeperServer.stop()
 }

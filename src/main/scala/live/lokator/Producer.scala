@@ -14,7 +14,7 @@ object Producer {
       val configuration = configureKafka()
 
       val producer = new KafkaProducer[String, String](configuration)
-      val record = new ProducerRecord[String, String](topic, "key", "value")
+      val record = new ProducerRecord[String, String](topic, "That's a key", "And Some content in here")
 
       producer.send(record)
       producer.close()
@@ -23,7 +23,7 @@ object Producer {
    def configureKafka(): Properties = {
       val properties = new Properties()
 
-      properties.put("bootstrap.servers", "localhost:9093")
+      properties.put("bootstrap.servers", "localhost:9092")
       properties.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
       properties.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
 

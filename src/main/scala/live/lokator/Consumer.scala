@@ -16,7 +16,7 @@ object Consumer {
 
    def consumeFromKafka(topic: String): Unit = {
       val properties = new Properties()
-      properties.put("bootstrap.servers", "localhost:9093")
+      properties.put("bootstrap.servers", "localhost:9092")
       properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
       properties.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer")
       properties.put("auto.offset.reset", "latest")
