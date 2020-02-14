@@ -5,7 +5,7 @@ import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 
 @RunWith(classOf[JUnitPlatform])
-class LibrarySuite extends AnyFunSuite {
+class ProducerTest extends AnyFunSuite {
   test("someMethod is always true") {
     assert(true)
   }
