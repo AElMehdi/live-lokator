@@ -8,6 +8,7 @@ lazy val liveLokator = (project in file("."))
     libraryDependencies += "org.apache.kafka" %% "kafka" % "2.4.0",
     libraryDependencies += "org.scalactic" %% "scalactic" % "3.1.0",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % "test",
+    libraryDependencies += "org.apache.kafka" % "kafka-streams-test-utils" % "2.4.0" % Test,
     resolvers += "Artima Maven Repository" at "https://repo.artima.com/releases",
     addSbtPlugin("com.artima.supersafe" % "sbtplugin" % "1.1.3"),
     libraryDependencies += "org.junit.platform" % "junit-platform-runner" % "1.0.0-M3" % "test",
